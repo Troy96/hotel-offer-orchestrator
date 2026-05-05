@@ -1,11 +1,18 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
    "compilerOptions": {
+    "baseUrl": ".",
+     "paths": {
+      "@suppliers/*": ["packages/suppliers/src/*"],
+      "@workflows/*": ["packages/workflows/src/*"],
+      "@redis/*": ["packages/redis/src/*"]
+    },
     "target": "ES2020",
     "module": "CommonJS",
     "rootDir": ".",
     "outDir": "dist",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "ignoreDeprecations": "6.0"
   }
 }
